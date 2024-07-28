@@ -1,6 +1,7 @@
 # NASA APOD Project
 
 This project leverages NASA's Astronomy Picture of the Day (APOD) API to fetch and display daily images of our universe. The APOD API is a powerful resource provided by NASA, offering access to their vast collection of astronomical images and data.
+[Check the project here](https://apodjoki.netlify.app/)
 
 ## Description
 
