@@ -31,21 +31,9 @@ function App() {
           "https://api.nasa.gov/planetary/apod" + `?api_key=${NASA_KEY}`;
         let res = await fetch(url);
         let apiData = await res.json();
-        if (apiData.hdurl) {
-          localStorage.setItem(localKey, JSON.stringify(apiData));
-          setData(apiData);
-          console.log("Fetched from API today");
-        } else {
-          const newURL =
-            "https://api.nasa.gov/planetary/apod" +
-            `?api_key=${NASA_KEY}` +
-            "&date=2024-07-26";
-          res = await fetch(newURL);
-          apiData = await res.json();
-          localStorage.setItem(localKey, JSON.stringify(apiData));
-          setData(apiData);
-          console.log("Fetched from API today");
-        }
+        localStorage.setItem(localKey, JSON.stringify(apiData));
+        setData(apiData);
+        console.log("Fetched from API today");
       } catch (err) {
         console.log(err.message);
       }
